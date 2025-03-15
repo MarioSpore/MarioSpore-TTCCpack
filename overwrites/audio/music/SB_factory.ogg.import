@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://bs6miaxf8ii6b"
-path="res://.godot/imported/SB_factory.ogg-f38e9f5ecff68611d44506f61f84b282.oggvorbisstr"
+path="res://.godot/imported/SB_factory.ogg-8ce636ca443145ce3b20a049e892c0cd.oggvorbisstr"
 
 [deps]
 
-source_file="res://mods-unpacked/MarioSpore-TTCCpack/overwrites/audio/music/SB_factory.ogg"
-dest_files=["res://.godot/imported/SB_factory.ogg-f38e9f5ecff68611d44506f61f84b282.oggvorbisstr"]
+source_file="res://mods-unpacked/disabled/MarioSpore-TTCCpack/overwrites/audio/music/SB_factory.ogg"
+dest_files=["res://.godot/imported/SB_factory.ogg-8ce636ca443145ce3b20a049e892c0cd.oggvorbisstr"]
 
 [params]
 

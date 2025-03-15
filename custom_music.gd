@@ -2,6 +2,10 @@ extends Node
 
 func _init():
 # music
+	Util.s_floor_started.connect(
+		func(floor: GameFloor):
+			
+		)
 	#bossbot
 	var club_resource := load("res://scenes/game_floor/department_floors/rooms_boss.tres")
 	club_resource.background_music.clear()
