@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/CB_mint_coin.ogg-79294330492630ce4c7a496ad0a7
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0

@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/LB_office_b.ogg-9dc3c33551e634d9e04da8edad284
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0

@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/Flock_of_one.ogg-02d62aca6b3b2953fc41d2d8437b
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0

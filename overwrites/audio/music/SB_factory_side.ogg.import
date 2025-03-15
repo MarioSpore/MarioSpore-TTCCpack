@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/SB_factory_side.ogg-8f36d30db5260c276b876e771
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0
