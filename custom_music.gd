@@ -17,21 +17,41 @@ func _init():
 	
 	#lawbot
 	var office_resource = load("res://scenes/game_floor/department_floors/rooms_law.tres")
-	office_resource.background_music.clear()
-	office_resource.background_music.append_array([load("res://mods-unpacked/MarioSpore-TTCCpack/overwrites/audio/music/LB_office_a.ogg"), load("res://mods-unpacked/MarioSpore-TTCCpack/overwrites/audio/music/LB_office_b.ogg"), load("res://mods-unpacked/MarioSpore-TTCCpack/overwrites/audio/music/LB_office_c.ogg")])
+	if not club_resource.background_music:
+		office_resource.background_music = []
+		office_resource.background_music.clear()
+		office_resource.background_music.append_array([
+		load("res://mods-unpacked/MarioSpore-TTCCpack/overwrites/audio/music/LB_office_a.ogg"),
+		load("res://mods-unpacked/MarioSpore-TTCCpack/overwrites/audio/music/LB_office_b.ogg"),
+		load("res://mods-unpacked/MarioSpore-TTCCpack/overwrites/audio/music/LB_office_c.ogg")
+])
 	office_resource.battle_music = load("res://mods-unpacked/MarioSpore-TTCCpack/overwrites/audio/music/LB_office_encntr_c_virtual.ogg")
+	ResourceSaver.save(office_resource, "res://scenes/game_floor/department_floors/rooms_law.tres")
 	
 	#cashbot
 	var mint_resource = load("res://scenes/game_floor/department_floors/rooms_cash.tres")
-	mint_resource.background_music.clear()
-	mint_resource.background_music.append_array([load("res://mods-unpacked/MarioSpore-TTCCpack/overwrites/audio/music/CB_mint_coin.ogg"), load("res://mods-unpacked/MarioSpore-TTCCpack/overwrites/audio/music/CB_mint_dollar.ogg"), load("res://mods-unpacked/MarioSpore-TTCCpack/overwrites/audio/music/CB_mint_bullion.ogg")])
+	if not mint_resource.background_music:
+		mint_resource.background_music = []
+		mint_resource.background_music.clear()
+		mint_resource.background_music.append_array([
+		load("res://mods-unpacked/MarioSpore-TTCCpack/overwrites/audio/music/CB_mint_coin.ogg"),
+		load("res://mods-unpacked/MarioSpore-TTCCpack/overwrites/audio/music/CB_mint_dollar.ogg"),
+		load("res://mods-unpacked/MarioSpore-TTCCpack/overwrites/audio/music/CB_mint_bullion.ogg")
+])
 	mint_resource.battle_music = load("res://mods-unpacked/MarioSpore-TTCCpack/overwrites/audio/music/CB_mint_encntr_bullion.ogg")
+	ResourceSaver.save(mint_resource, "res://scenes/game_floor/department_floors/rooms_cash.tres")
 	
 	#sellbot
 	var factory_resource = load("res://scenes/game_floor/department_floors/rooms_sell.tres")
-	factory_resource.background_music.clear()
-	factory_resource.background_music.append_array([load("res://mods-unpacked/MarioSpore-TTCCpack/overwrites/audio/music/SB_factory.ogg"), load("res://mods-unpacked/MarioSpore-TTCCpack/overwrites/audio/music/SB_factory_side.ogg")])
+	if not factory_resource.background_music:
+		factory_resource.background_music = []
+		factory_resource.background_music.clear()
+		factory_resource.background_music.append_array([
+		load("res://mods-unpacked/MarioSpore-TTCCpack/overwrites/audio/music/SB_factory.ogg"),
+		load("res://mods-unpacked/MarioSpore-TTCCpack/overwrites/audio/music/SB_factory_side.ogg")
+])
 	factory_resource.battle_music = load("res://mods-unpacked/MarioSpore-TTCCpack/overwrites/audio/music/SB_factory_encntr.ogg")
+	ResourceSaver.save(factory_resource, "res://scenes/game_floor/department_floors/rooms_sell.tres")
 
 	#turn-based bosses
   ## Run this once game is initialized:
