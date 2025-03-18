@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://clrmlmax2gon1"
-path="res://.godot/imported/GS_Race_SS.ogg-e91bfeccf2fbceaaef4bb273889bb967.oggvorbisstr"
+path="res://.godot/imported/GS_Race_SS.ogg-4128a0de173526076d933a75c9937b4e.oggvorbisstr"
 
 [deps]
 
-source_file="res://mods-unpacked/disabled/MarioSpore-TTCCpack/overwrites/audio/music/GS_Race_SS.ogg"
-dest_files=["res://.godot/imported/GS_Race_SS.ogg-e91bfeccf2fbceaaef4bb273889bb967.oggvorbisstr"]
+source_file="res://mods-unpacked/MarioSpore-TTCCpack/overwrites/audio/music/GS_Race_SS.ogg"
+dest_files=["res://.godot/imported/GS_Race_SS.ogg-4128a0de173526076d933a75c9937b4e.oggvorbisstr"]
 
 [params]
 

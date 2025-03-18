@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://dbupqovqx5kr8"
-path="res://.godot/imported/Flock_of_one.ogg-41a1b9f5e6ccb474ae65a27c12b9b8cc.oggvorbisstr"
+path="res://.godot/imported/Flock_of_one.ogg-02d62aca6b3b2953fc41d2d8437b0b9e.oggvorbisstr"
 
 [deps]
 
-source_file="res://mods-unpacked/disabled/MarioSpore-TTCCpack/overwrites/audio/music/Flock_of_one.ogg"
-dest_files=["res://.godot/imported/Flock_of_one.ogg-41a1b9f5e6ccb474ae65a27c12b9b8cc.oggvorbisstr"]
+source_file="res://mods-unpacked/MarioSpore-TTCCpack/overwrites/audio/music/Flock_of_one.ogg"
+dest_files=["res://.godot/imported/Flock_of_one.ogg-02d62aca6b3b2953fc41d2d8437b0b9e.oggvorbisstr"]
 
 [params]
 

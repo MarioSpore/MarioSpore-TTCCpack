@@ -36,5 +36,5 @@ func _ready() -> void:
 	if s_script:
 		var s = s_script.new()
 		add_child(s)
-
+		
 	ModLoaderLog.info("Ready", LOG_NAME)

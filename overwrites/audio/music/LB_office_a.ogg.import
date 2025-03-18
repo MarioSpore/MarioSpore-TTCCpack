@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://e140mxemqfyo"
-path="res://.godot/imported/LB_office_a.ogg-3df2f61b8bcf58b9d26b0399c6b6ceb0.oggvorbisstr"
+path="res://.godot/imported/LB_office_a.ogg-3eade4ec732f9306488252abcc3f0f1d.oggvorbisstr"
 
 [deps]
 
-source_file="res://mods-unpacked/disabled/MarioSpore-TTCCpack/overwrites/audio/music/LB_office_a.ogg"
-dest_files=["res://.godot/imported/LB_office_a.ogg-3df2f61b8bcf58b9d26b0399c6b6ceb0.oggvorbisstr"]
+source_file="res://mods-unpacked/MarioSpore-TTCCpack/overwrites/audio/music/LB_office_a.ogg"
+dest_files=["res://.godot/imported/LB_office_a.ogg-3eade4ec732f9306488252abcc3f0f1d.oggvorbisstr"]
 
 [params]
 

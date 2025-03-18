@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://282qimbkuta"
-path="res://.godot/imported/CB_mint_dollar.ogg-ce8bb76f3f7b91ea8d631738160401ea.oggvorbisstr"
+path="res://.godot/imported/CB_mint_dollar.ogg-ead2e3b14d9f1cc68ffb8f58723e1f99.oggvorbisstr"
 
 [deps]
 
-source_file="res://mods-unpacked/disabled/MarioSpore-TTCCpack/overwrites/audio/music/CB_mint_dollar.ogg"
-dest_files=["res://.godot/imported/CB_mint_dollar.ogg-ce8bb76f3f7b91ea8d631738160401ea.oggvorbisstr"]
+source_file="res://mods-unpacked/MarioSpore-TTCCpack/overwrites/audio/music/CB_mint_dollar.ogg"
+dest_files=["res://.godot/imported/CB_mint_dollar.ogg-ead2e3b14d9f1cc68ffb8f58723e1f99.oggvorbisstr"]
 
 [params]
 
