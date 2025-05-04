@@ -26,7 +26,12 @@ const RANDOM_OFFICE_MUSIC: Dictionary[String, String] = {
 	"res://mods-unpacked/MarioSpore-TTCCpack/music_tracks/LB_office_b.ogg" : "res://mods-unpacked/MarioSpore-TTCCpack/music_tracks/LB_office_encntr_b.ogg",
 	"res://mods-unpacked/MarioSpore-TTCCpack/music_tracks/LB_office_c.ogg" : "res://mods-unpacked/MarioSpore-TTCCpack/music_tracks/LB_office_encntr_c.ogg",
 }
-const RANDOM_CLUB_MUSIC: Dictionary[String, String] = {
+const RANDOM_VIRTUAL_COGS: Dictionary[String, String] = {
+	"res://mods-unpacked/MarioSpore-TTCCpack/music_tracks/LB_office_encntr_a.ogg" : "res://mods-unpacked/MarioSpore-TTCCpack/music_tracks/LB_office_encntr_a_virtual.ogg",
+	"res://mods-unpacked/MarioSpore-TTCCpack/music_tracks/LB_office_encntr_b.ogg" : "res://mods-unpacked/MarioSpore-TTCCpack/music_tracks/LB_office_encntr_b_virtual.ogg",
+	"res://mods-unpacked/MarioSpore-TTCCpack/music_tracks/LB_office_encntr_c.ogg" : "res://mods-unpacked/MarioSpore-TTCCpack/music_tracks/LB_office_encntr_c_virtual.ogg",
+}
+const RANDOM_GOLF_MUSIC: Dictionary[String, String] = {
 	"res://mods-unpacked/MarioSpore-TTCCpack/music_tracks/BB_club_silver.ogg" : "res://mods-unpacked/MarioSpore-TTCCpack/music_tracks/BB_club_silver_encntr.ogg",
 	"res://mods-unpacked/MarioSpore-TTCCpack/music_tracks/BB_club_gold.ogg" : "res://mods-unpacked/MarioSpore-TTCCpack/music_tracks/BB_club_gold_encntr.ogg",
 	"res://mods-unpacked/MarioSpore-TTCCpack/music_tracks/BB_club_diamond.ogg" : "res://mods-unpacked/MarioSpore-TTCCpack/music_tracks/BB_club_diamond_encntr.ogg",
@@ -42,6 +47,12 @@ func _ready() -> void:
 	AudioManager.s_music_changed.connect(on_music_changed)
 	ModLoaderLog.info("Ready!", ROOM_LOADER_LOG)
 	Util.s_floor_started.connect(on_floor_started)
+	BattleService.s_battle_spawned.connect(virtual_cog_battle)
+
+func virtual_cog_battle(virtual_cogs : VirtualCogIntro) -> void:
+	if virtual_cogs.override_intro is VirtualCogIntro:
+		var virtual_cog_music: String = RandomService.array_pick_random('true_random', RANDOM_VIRTUAL_COGS.keys())
+		virtual_cogs.override_intro.override_music = RANDOM_VIRTUAL_COGS[(virtual_cog_music)]
 
 func on_music_changed(new_music : AudioStream, _is_default) -> void:
 	if not MUSIC_MAPPINGS.keys().find(new_music.resource_path.get_file()) == -1:
@@ -59,8 +70,8 @@ func on_floor_started(game_floor: GameFloor) -> void:
 		on_mint_entered(floor_variant)
 	if floor_variant.floor_name.to_lower().contains("office"):
 		on_office_entered(floor_variant)
-	if floor_variant.floor_name.to_lower().contains("club"):
-		on_club_entered(floor_variant)
+	if floor_variant.floor_name.to_lower().contains("golf"):
+		on_golf_entered(floor_variant)
 
 func on_factory_entered(floor_variant: FloorVariant) -> void:
 	var factory_facility_music: String = RandomService.array_pick_random('true_random', RANDOM_FACTORY_MUSIC.keys())
@@ -80,8 +91,8 @@ func on_office_entered(floor_variant: FloorVariant) -> void:
 	floor_variant.floor_type.background_music = [load(office_facility_music)]
 	floor_variant.floor_type.battle_music = load(office_battle_music)
 	
-func on_club_entered(floor_variant: FloorVariant) -> void:
-	var club_facility_music: String = RandomService.array_pick_random('true_random', RANDOM_CLUB_MUSIC.keys())
-	var club_battle_music: String = RANDOM_OFFICE_MUSIC[club_facility_music]
-	floor_variant.floor_type.background_music = [load(club_facility_music)]
-	floor_variant.floor_type.battle_music = load(club_battle_music)
+func on_golf_entered(floor_variant: FloorVariant) -> void:
+	var golf_facility_music: String = RandomService.array_pick_random('true_random', RANDOM_GOLF_MUSIC.keys())
+	var golf_battle_music: String = RANDOM_GOLF_MUSIC[golf_facility_music]
+	floor_variant.floor_type.background_music = [load(golf_facility_music)]
+	floor_variant.floor_type.battle_music = load(golf_battle_music)
