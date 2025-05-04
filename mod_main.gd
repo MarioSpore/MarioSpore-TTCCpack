@@ -47,12 +47,15 @@ func _ready() -> void:
 	AudioManager.s_music_changed.connect(on_music_changed)
 	ModLoaderLog.info("Ready!", ROOM_LOADER_LOG)
 	Util.s_floor_started.connect(on_floor_started)
-	BattleService.s_battle_spawned.connect(virtual_cog_battle)
+	BattleService.s_battle_spawned.connect(cog_battle_started)
 
-func virtual_cog_battle(virtual_cogs : VirtualCogIntro) -> void:
-	if virtual_cogs.override_intro is VirtualCogIntro:
-		var virtual_cog_music: String = RandomService.array_pick_random('true_random', RANDOM_VIRTUAL_COGS.keys())
-		virtual_cogs.override_intro.override_music = RANDOM_VIRTUAL_COGS[(virtual_cog_music)]
+func cog_battle_started(battle: BattleNode) -> void:
+	if battle.override_intro is VirtualCogIntro:
+		virtual_cog_battle(battle.override_intro)
+
+func virtual_cog_battle(intro : VirtualCogIntro) -> void:
+	var virtual_cog_music: String = RandomService.array_pick_random('true_random', RANDOM_VIRTUAL_COGS.keys())
+	intro.override_music = load(RANDOM_VIRTUAL_COGS[(virtual_cog_music)])
 
 func on_music_changed(new_music : AudioStream, _is_default) -> void:
 	if not MUSIC_MAPPINGS.keys().find(new_music.resource_path.get_file()) == -1:
