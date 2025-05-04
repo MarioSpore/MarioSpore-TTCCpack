@@ -8,16 +8,8 @@ const ROOM_LOADER_LOG := "MarioSpore-TTCCpack:Main"
 const MUSIC_MAPPINGS : Dictionary[String, String] = {
 	"climb_boss.ogg" : "GS_Race_SS.ogg",
 	"clown_boss.ogg" : "Flock_of_one.ogg",
-	"ground_floor_investor.ogg" : "instance_rainmaker_battle_empty.ogg",
-	"encntr_skull_master.ogg" : "LB_boss_cutscene_1.ogg",
-	"new_lavaboss_battle.ogg" : "Instance_rainmaker_battle_empty.ogg",
 	"main_theme.ogg" : "tt_theme.ogg",
-	"MG_Pairing.ogg" : "MG_Pairing.ogg",
-	#"beta_installer.ogg" : "building_c_elevator.ogg",
-	#"beta_installer.ogg" : "building_g_elevator.ogg",
-	#"beta_installer.ogg" : "building_l_elevator.ogg",
-	#"beta_installer.ogg" : "building_m_elevator.ogg",
-	#"beta_installer.ogg" : "building_s_elevator.ogg",
+	"MG_Pairing.ogg" : "MG_Pairing.ogg"
 	
 }
 const RANDOM_FACTORY_MUSIC: Dictionary[String, String] = {
